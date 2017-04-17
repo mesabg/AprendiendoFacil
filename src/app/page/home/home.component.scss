@@ -1,0 +1,42 @@
+#home-page{
+	font-family: 'Indie Flower' !important;
+}
+
+div.custom-item{
+	height: 650px;
+	width: 100%;
+}
+
+div.custom-item img{
+	height: 100%;
+	width: 100%;
+}
+
+#mainCarousel{
+	width: 100%;
+}
+
+#news{
+	height: 700px;
+	overflow: scroll;
+}
+
+.carousel-caption{
+	font-family: 'Indie Flower';
+	font-weight: bold;
+	color: black;
+}
+
+div.course span{
+	width: 100%;
+	height: 250px;
+}
+
+div.course img{
+	width: inherit;
+	height: inherit;
+}
+
+div.course{
+	background-color: #eeeeee;
+}

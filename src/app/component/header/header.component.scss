@@ -1,0 +1,633 @@
+//-- defined colors
+$main-color: #5200cc;
+$color01: red;
+$color02: orange;
+$color03: green;
+$color04: blue;
+
+//-- defined sizes
+$phone-size: 480px;
+$tablet-size: 992px;
+$font-size: 30px;
+$font-size-min: 100%;
+$font-size-max: 115%;
+
+//-- styling main menu
+#main-header{
+	font-family: 'Indie Flower' !important;
+
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		height: 90px;
+		font-size: $font-size;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+#main-header div#navbarMainMenu{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		height: 100%;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+#main-header a{
+	color: white !important;
+	text-align: center !important;
+
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		height: 100%;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+#main-header div#navbarMainMenu li.active{
+	font-weight: bold;
+}
+
+//-- Defining Animations
+@mixin color-active($color, $padding, $font){
+	background-color: $color; 
+	padding-top: $padding;
+	font-size: $font;
+}
+
+@mixin color-animation($color, $padding, $translate, $font) {
+	@include color-active($color, $padding, $font);
+	transform: translateY($translate); 
+}
+
+@mixin color-animation-basic($color){
+	@include color-animation($color, 18px, 20px, $font-size-max);
+}
+
+@mixin color-animation-basic-active($color){
+	@include color-animation($color, 18px, 20px, $font-size-max);
+}
+
+@mixin color-animation-restore-default{
+	@include color-animation($main-color, 0px, 0px, $font-size-min);
+}
+
+@mixin color-animation-restore-active-default($color){
+	@include color-animation($color, 18px, 0px, $font-size-max);
+}
+
+@mixin keyframes-color-animation($name, $color) {
+	@-webkit-keyframes #{$name} {
+    	0% { @include color-animation-restore-default(); }
+		100% { @include color-animation-basic($color); }
+	}
+	@-moz-keyframes #{$name} {
+    	0% { @include color-animation-restore-default(); }
+		100% { @include color-animation-basic($color); }
+	}
+	@-ms-keyframes #{$name} {
+    	0% { @include color-animation-restore-default(); }
+		100% { @include color-animation-basic($color); }
+	}
+	@keyframes #{$name} {
+    	0% { @include color-animation-restore-default(); }
+		100% { @include color-animation-basic($color); }
+	}
+}
+
+@mixin keyframes-color-animation-restore($name, $color) {
+	@-webkit-keyframes #{$name} {
+		0% { @include color-animation-basic($color); }
+    	100% { @include color-animation-restore-default(); }
+	}
+	@-moz-keyframes #{$name} {
+		0% { @include color-animation-basic($color); }
+    	100% { @include color-animation-restore-default(); }
+	}
+	@-ms-keyframes #{$name} {
+		0% { @include color-animation-basic($color); }
+    	100% { @include color-animation-restore-default(); }
+	}
+	@keyframes #{$name} {
+		0% { @include color-animation-basic($color); }
+    	100% { @include color-animation-restore-default(); }
+	}
+}
+
+@mixin keyframes-color-animation-active($name, $color) {
+	@-webkit-keyframes #{$name} {
+    	0% { @include color-animation-restore-active-default($color); }
+		100% { @include color-animation-basic-active($color); }
+	}
+	@-moz-keyframes #{$name} {
+    	0% { @include color-animation-restore-active-default($color); }
+		100% { @include color-animation-basic-active($color); }
+	}
+	@-ms-keyframes #{$name} {
+    	0% { @include color-animation-restore-active-default($color); }
+		100% { @include color-animation-basic-active($color); }
+	}
+	@keyframes #{$name} {
+    	0% { @include color-animation-restore-active-default($color); }
+		100% { @include color-animation-basic-active($color); }
+	}
+}
+
+@mixin keyframes-color-animation-active-restore($name, $color) {
+	@-webkit-keyframes #{$name} {
+		0% { @include color-animation-basic-active($color); }
+    	100% { @include color-animation-restore-active-default($color); }
+	}
+	@-moz-keyframes #{$name} {
+		0% { @include color-animation-basic-active($color); }
+    	100% { @include color-animation-restore-active-default($color); }
+	}
+	@-ms-keyframes #{$name} {
+		0% { @include color-animation-basic-active($color); }
+    	100% { @include color-animation-restore-active-default($color); }
+	}
+	@keyframes #{$name} {
+		0% { @include color-animation-basic-active($color); }
+    	100% { @include color-animation-restore-active-default($color); }
+	}
+}
+
+@include keyframes-color-animation-restore (color-01-animation-restore, $color01);
+@include keyframes-color-animation-restore (color-02-animation-restore, $color02);
+@include keyframes-color-animation-restore (color-03-animation-restore, $color03);
+@include keyframes-color-animation-restore (color-04-animation-restore, $color04);
+
+@include keyframes-color-animation (color-01-animation, $color01);
+@include keyframes-color-animation (color-02-animation, $color02);
+@include keyframes-color-animation (color-03-animation, $color03);
+@include keyframes-color-animation (color-04-animation, $color04);
+
+@include keyframes-color-animation-active-restore (color-01-animation-active-restore, $color01);
+@include keyframes-color-animation-active-restore (color-02-animation-active-restore, $color02);
+@include keyframes-color-animation-active-restore (color-03-animation-active-restore, $color03);
+@include keyframes-color-animation-active-restore (color-04-animation-active-restore, $color04);
+
+@include keyframes-color-animation-active (color-01-animation-active, $color01);
+@include keyframes-color-animation-active (color-02-animation-active, $color02);
+@include keyframes-color-animation-active (color-03-animation-active, $color03);
+@include keyframes-color-animation-active (color-04-animation-active, $color04);
+
+
+//-- Animations States
+//-- Active
+#main-header li[color="01"][state="active"]{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		@include color-active($color01, 18px, $font-size-max);
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Restore (active)
+#main-header li[color="01"][state="active"].mouseenter{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-01-animation-active-restore;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Hovered (active)
+#main-header li[color="01"][state="active"]:hover{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-01-animation-active;
+		animation-duration: .8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Restore (inactive)
+#main-header li[color="01"][state="inactive"].mouseenter{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-01-animation-restore;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Hovered (inactive)
+#main-header li[color="01"][state="inactive"]:hover{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-01-animation;
+		animation-duration: .8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+//--Color 02
+//-- Active
+#main-header li[color="02"][state="active"]{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		@include color-active($color02, 18px, $font-size-max);
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Restore (active)
+#main-header li[color="02"][state="active"].mouseenter{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-02-animation-active-restore;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Hovered (active)
+#main-header li[color="02"][state="active"]:hover{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-02-animation-active;
+		animation-duration: .8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Restore (inactive)
+#main-header li[color="02"][state="inactive"].mouseenter{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-02-animation-restore;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Hovered (inactive)
+#main-header li[color="02"][state="inactive"]:hover{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-02-animation;
+		animation-duration: .8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+
+//--Color 03
+//-- Active
+#main-header li[color="03"][state="active"]{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		@include color-active($color03, 18px, $font-size-max);
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Restore (active)
+#main-header li[color="03"][state="active"].mouseenter{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-03-animation-active-restore;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Hovered (active)
+#main-header li[color="03"][state="active"]:hover{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-03-animation-active;
+		animation-duration: .8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Restore (inactive)
+#main-header li[color="03"][state="inactive"].mouseenter{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-03-animation-restore;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Hovered (inactive)
+#main-header li[color="03"][state="inactive"]:hover{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-03-animation;
+		animation-duration: .8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+
+
+//--Color 04
+//-- Active
+#main-header li[color="04"][state="active"]{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		@include color-active($color04, 18px, $font-size-max);
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Restore (active)
+#main-header li[color="04"][state="active"].mouseenter{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-04-animation-active-restore;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Hovered (active)
+#main-header li[color="04"][state="active"]:hover{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-04-animation-active;
+		animation-duration: .8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Restore (inactive)
+#main-header li[color="04"][state="inactive"].mouseenter{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-04-animation-restore;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+//-- Hovered (inactive)
+#main-header li[color="04"][state="inactive"]:hover{
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		animation-name: color-04-animation;
+		animation-duration: .8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+#navbarMainMenu span {
+	width: 50%;
+	height: auto;
+}
+
+#navbarMainMenu img{
+	width: 50%;
+	height: auto;
+}
+
+#main-menu{
+	height: inherit;
+	background-color: $main-color;
+
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+#rightMenu{
+	font-size: 20px;
+}

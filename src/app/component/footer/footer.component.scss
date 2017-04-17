@@ -1,0 +1,54 @@
+//-- defined colors
+$main-color: #330080;
+
+//-- defined sizes
+$phone-size: 480px;
+$tablet-size: 992px;
+
+//-- styling main menu
+#main-footer{
+	font-family: 'Mukta Vaani' !important;
+
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+		height: 300px;
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}
+
+#main-footer a{
+	color: white;
+}
+
+#main-footer p{
+	color: white;
+}
+
+#main-footer-content{
+	height: inherit;
+	background-color: $main-color;
+
+	//-- style desktop
+	@media screen and (min-width: $tablet-size){
+
+	}
+
+	//-- style tablets
+	@media screen and (max-width: $tablet-size){
+
+	}
+
+	//-- style phones
+	@media screen and (max-width: $phone-size){
+
+	}
+}

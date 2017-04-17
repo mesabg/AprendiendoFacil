@@ -1,0 +1,39 @@
+/*-----
+Fonts
+-----*/
+
+//-- Mukta Vaani - Latin
+@font-face {
+	font-family: 'Mukta Vaani';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../assets/fonts/mukta-vaani.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+//-- Indie Flower - Latin
+@font-face {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/indie-flower.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+//-- Concert One - Latin
+@font-face {
+  font-family: 'Concert One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/concert-one.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+
+/*--------
+Main Styles
+--------*/
+a{
+  text-decoration: none;
+}

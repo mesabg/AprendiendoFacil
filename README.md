@@ -26,3 +26,28 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Configuración
+
+Para iniciar el proyecto hay varias maneras, aqui las listo:
+
+Con node y angular cli (Modo de desarrollo, para edición y de más):
+1. Instalar nodejs en su ultima version
+2. Iniciar la consola
+3. Ejecutar "npm install -g @angular/cli"
+4. Moverse a la carpeta del proyecto y ejecutar "npm install" (para instalar todas las dependencias)
+5. En la carpeta del proyecto ejecutar "ng serve" (cuidado con este porque borra el directorio dist automaticamente)
+
+Si se borró la carpeta "dist", esta puede ser restaurada con:
+1. Iniciar la consola
+2. Moverse a la carpeta del proyecto y ejecutar "ng build --prod" (compilación de produccion)
+
+Con node y http-server (más rapido, ejecuta la version ya compilada):
+1. Instalar nodejs en su ultima version
+2. Iniciar la consola
+3. Ejecutar "npm install -g http-server"
+4. Moverse a la subcarpeta dist del proyecto y ejecutar "http-server"
+
+Con un servidor apache cualquiera (mucho más rápido)
+1. Copiar la carpeta dist a un directorio nuevo dentro del htdocs de algún servidor apache
