@@ -1,34 +1,44 @@
 <header id="main-header" class="sticky-top">
-	<nav id="main-menu" class="navbar navbar-toggleable-md">
+	<nav id="main-menu" class="navbar navbar-toggleable-md container">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMainMenu" aria-controls="navbarMainMenu" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
+		<span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMainMenu">
-			<!--<a class="navbar-brand" routerLink="/home" routerLinkActive="active">Aprendiendo F&aacute;cil</a>-->
-			<ul class="navbar-nav mr-auto mt-3 mt-lg-0">
-				<li class="nav-item color-01 col-md-6" color="01" state="active" MenuHighlight>
-					<a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+			<a class="navbar-brand" routerLink="/inicio" routerLinkActive="active" MenuHighlight>
+				<div style="margin-right: 20px !important;">
+					<img src="assets/images/iconos/logo-1.png" alt="Aprendiendo Fácil" class="img-fluid" style="width:50px; height:50px;">
+					<p> Aprendiendo F&aacute;cil </p>
+				</div>
+			</a>
+			<ul id="leftMenu" class="row navbar-nav mr-auto mt-3 mt-lg-0">
+				<li class="nav-item col-sm-12 col-md-3" color="01" state="active" MenuHighlight>
+					<a class="nav-link" routerLink="/inicio" routerLinkActive="active">
+						Inicio
+					</a>
 				</li>
-				<li class="nav-item color-02 col-md-6" color="02" state="inactive" MenuHighlight>
-					<a class="nav-link" routerLink="/courses" routerLinkActive="active">Cursos</a>
+				<li class="nav-item col-sm-12 col-md-4" color="02" state="inactive" MenuHighlight>
+					<a class="nav-link" routerLink="/cursos" routerLinkActive="active">Cursos</a>
+				</li>
+				<li class="nav-item col-sm-12 col-md-5" color="03" state="inactive" MenuHighlight>
+					<a class="nav-link" routerLink="/sobre-nosotros" routerLinkActive="active">Nosotros</a>
 				</li>
 				<!--<li class="nav-item color-03 col-md-5" color="03" state="inactive" MenuHighlight>
-					<a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+							<a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
 				</li>
 				<li class="nav-item color-04 col-md-5" color="04" state="inactive" MenuHighlight>
-					<a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+							<a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
 				</li>-->
 			</ul>
 			<ul id="rightMenu" class="nav navbar-nav ml-auto">
-				<li class="nav-item color-01 col-md-4" color="01" state="inactive" MenuHighlight>
-					<a class="nav-link" routerLink="/register" routerLinkActive="active">Registro</a>
+				<li class="nav-item color-01 col-md-5" color="04" state="inactive" MenuHighlight>
+					<a class="nav-link" routerLink="/registro" routerLinkActive="active">Registro</a>
 				</li>
-				<li class="nav-item color-02 col-md-4" color="02" state="inactive" MenuHighlight>
-					<a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+				<li class="nav-item color-02 col-md-7" color="01" state="inactive" MenuHighlight>
+					<a class="nav-link" routerLink="/iniciar-sesion" routerLinkActive="active">Iniciar Sesi&oacute;n</a>
 				</li>
-				<li class="nav-item color-03 col-md-4" color="03" state="inactive" MenuHighlight>
-					<a class="nav-link" routerLink="/profile" routerLinkActive="active">Perfil</a>
-				</li>
+				<!--<li class="nav-item color-03 col-md-4" color="02" state="inactive" MenuHighlight>
+							<a class="nav-link" routerLink="/perfil" routerLinkActive="active">Perfil</a>
+				</li>-->
 			</ul>
 		</div>
 	</nav>

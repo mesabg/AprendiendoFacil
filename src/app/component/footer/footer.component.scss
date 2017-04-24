@@ -1,5 +1,5 @@
 //-- defined colors
-$main-color: #330080;
+$main-color: #800000/*#330080*/;
 
 //-- defined sizes
 $phone-size: 480px;
@@ -8,10 +8,15 @@ $tablet-size: 992px;
 //-- styling main menu
 #main-footer{
 	font-family: 'Mukta Vaani' !important;
+	background-color: $main-color;
+	
+	.container{
+		padding-top: 20px;
+	}
 
 	//-- style desktop
 	@media screen and (min-width: $tablet-size){
-		height: 300px;
+		height: 150px;
 	}
 
 	//-- style tablets
@@ -21,7 +26,6 @@ $tablet-size: 992px;
 
 	//-- style phones
 	@media screen and (max-width: $phone-size){
-
 	}
 }
 

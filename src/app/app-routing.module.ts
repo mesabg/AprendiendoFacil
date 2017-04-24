@@ -12,14 +12,14 @@ import { LoginComponent } from './page/login/login.component';
 
 const routes: Routes = [
 	{path: '', children: [
-		{path: '', redirectTo: 'home', pathMatch: 'full'},
-		{path: 'home', component: HomeComponent},
-		{path: 'about-us', component: AboutUsComponent},
-		{path: 'profile', component: ProfileComponent},
-		{path: 'register', component: RegisterComponent},
-		{path: 'login', component: LoginComponent},
+		{path: '', redirectTo: 'inicio', pathMatch: 'full'},
+		{path: 'inicio', component: HomeComponent},
+		{path: 'sobre-nosotros', component: AboutUsComponent},
+		{path: 'perfil', component: ProfileComponent},
+		{path: 'registro', component: RegisterComponent},
+		{path: 'iniciar-sesion', component: LoginComponent},
 		{path: 'course-detail', component: CourseDetailComponent},
-		{path: 'courses', component: CoursesComponent}
+		{path: 'cursos', component: CoursesComponent}
 	]}
 ];
 

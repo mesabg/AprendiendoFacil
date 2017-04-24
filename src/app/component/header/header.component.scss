@@ -1,5 +1,5 @@
 //-- defined colors
-$main-color: #5200cc;
+$main-color: #800000/*#5200cc*/;
 $color01: red;
 $color02: orange;
 $color03: green;
@@ -15,6 +15,7 @@ $font-size-max: 115%;
 //-- styling main menu
 #main-header{
 	font-family: 'Indie Flower' !important;
+	background-color: $main-color;
 
 	//-- style desktop
 	@media screen and (min-width: $tablet-size){
@@ -87,11 +88,11 @@ $font-size-max: 115%;
 }
 
 @mixin color-animation-basic($color){
-	@include color-animation($color, 18px, 20px, $font-size-max);
+	@include color-animation($color, 18px, 20px, $font-size-min);
 }
 
 @mixin color-animation-basic-active($color){
-	@include color-animation($color, 18px, 20px, $font-size-max);
+	@include color-animation($color, 18px, 20px, $font-size-min);
 }
 
 @mixin color-animation-restore-default{
@@ -99,7 +100,7 @@ $font-size-max: 115%;
 }
 
 @mixin color-animation-restore-active-default($color){
-	@include color-animation($color, 18px, 0px, $font-size-max);
+	@include color-animation($color, 18px, 0px, $font-size-min);
 }
 
 @mixin keyframes-color-animation($name, $color) {
@@ -204,7 +205,7 @@ $font-size-max: 115%;
 #main-header li[color="01"][state="active"]{
 	//-- style desktop
 	@media screen and (min-width: $tablet-size){
-		@include color-active($color01, 18px, $font-size-max);
+		@include color-active($color01, 18px, $font-size-min);
 	}
 
 	//-- style tablets
@@ -303,7 +304,7 @@ $font-size-max: 115%;
 #main-header li[color="02"][state="active"]{
 	//-- style desktop
 	@media screen and (min-width: $tablet-size){
-		@include color-active($color02, 18px, $font-size-max);
+		@include color-active($color02, 18px, $font-size-min);
 	}
 
 	//-- style tablets
@@ -403,7 +404,7 @@ $font-size-max: 115%;
 #main-header li[color="03"][state="active"]{
 	//-- style desktop
 	@media screen and (min-width: $tablet-size){
-		@include color-active($color03, 18px, $font-size-max);
+		@include color-active($color03, 18px, $font-size-min);
 	}
 
 	//-- style tablets
@@ -504,7 +505,7 @@ $font-size-max: 115%;
 #main-header li[color="04"][state="active"]{
 	//-- style desktop
 	@media screen and (min-width: $tablet-size){
-		@include color-active($color04, 18px, $font-size-max);
+		@include color-active($color04, 18px, $font-size-min);
 	}
 
 	//-- style tablets
