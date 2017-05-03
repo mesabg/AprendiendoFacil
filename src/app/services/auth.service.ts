@@ -1,40 +1,40 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-declare var CryptoJS:any;
+import { Router } from '@angular/router';
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/delay';
+
+declare var CryptoJS:any;
 
 @Injectable()
 export class AuthService {
-	isLoggedIn: boolean;
+	userData: EventEmitter<any> = new EventEmitter<any>();
+	isLoggedIn: boolean = true;
+	redirectUrl: string = '';
 
-	constructor(private http:Http) {}
+	constructor(private http:Http, private router:Router) {}
 
-	login(userCredentials:any){
-		console.log("Login in...");
+	login(userCredentials:any):boolean{
+		console.log("Login in Service Activated...");
+		sessionStorage.setItem("auth_key", 'sliruvhasirngaowrgasrgñskg)/&%wef');
+		this.userData.emit(userCredentials);
+		return this.isLoggedIn = true;
+	}
 
+	logout():void{
 		this.isLoggedIn = false;
-		var headers = new Headers();
-		var credentials = 'user=' + userCredentials.username + '&pass=' + userCredentials.password;
-		var hash =  CryptoJS.SHA1(credentials, 'AprendiendoFacil').toString(CryptoJS.enc.Base64);
-		headers.append('Content-Type', 'application/X-www-form=urlencoded');
+		this.userData.emit('Sign In');
+	}
 
-		return new Promise((resolve) => {
-			window.sessionStorage.setItem("auth_key", hash);
-			console.log(window.sessionStorage.getItem("auth_key"));
-			this.isLoggedIn = true;
-			resolve(this.isLoggedIn);
-		});
+	isLogged():boolean{
+		return sessionStorage.auth_key != undefined;
+	}
 
-		/*return new Promise((resolve) => {
-			this.http.post('http://path', credentials, {headers: headers}).subscribe(
-				(data) => {
-					if(data.json().success){
-						window.localStorage.setItem("auth_key", data.json().token);
-						this.isLoggedIn = true;
-						resolve(this.isLoggedIn);
-					}
-				}
-			);
-		});*/
+	redirect():void{
+		if (this.redirectUrl != '') this.router.navigate(['/inicio']);
+		else this.router.navigate([this.redirectUrl]);
 	}
 }

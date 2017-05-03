@@ -70,30 +70,6 @@ div.course{
 	//background-color: #eeeeee;
 }
 
-.color-opacity{
-	background-color: $color;
-	background-blend-mode: color;
-	color: white;
-}
-
-.color-opacity-blue{
-	background-color: $blue;
-	background-blend-mode: color;
-	color: white;
-}
-
-.color-opacity-yellow{
-	background-color: $yellow;
-	background-blend-mode: color;
-	color: white;
-}
-
-.color-opacity-red{
-	background-color: $red;
-	background-blend-mode: color;
-	color: white;
-}
-
 .padding-round{
 	border-radius: 7px 7px 7px 7px;
 	-moz-border-radius: 7px 7px 7px 7px;
@@ -119,3 +95,7 @@ div.course{
 	background-size: cover;
 }
 
+#main-banner{
+	h1 {font-weight: bold;}
+	p, h1 {text-shadow: 3px 3px 6px grey;}
+}

@@ -1,0 +1,254 @@
+#mediaq {
+background: -webkit-linear-gradient(top, rgba(100,255,100,0), rgba(100,255,100,0.8)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(top, rgba(100,255,100,0), rgba(100,255,100,0.8)); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(top, rgba(100,255,100,0), rgba(100,255,100,0.8)); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to top, rgba(100,255,100,0), rgba(100,255,100,0.8)); /* Standard syntax (must be last) */
+background-repeat : no-repeat; 
+background-attachment: fixed;
+}
+
+#quizname {
+position: absolute;
+left: 60%;
+top: 210px;	
+font-family : "verdana"; 
+font-size: 14px;
+font-weight: bold;
+color : midnightblue;
+}
+
+#largebanner {position : absolute ; left : 10%; top : 20px; width: 85%; height : 140px; visibility : visible;}
+#smallbanner {visibility : hidden;}
+
+#btnqset1 {
+float : left;
+position: absolute;
+left: 10%;;
+top: 280px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset2 {
+position: absolute;
+left: 10%;
+top: 330px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset3 {
+position: absolute;
+left: 10%;
+top: 380px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset4 {
+position: absolute;
+left: 10%;
+top: 430px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset5 {
+position: absolute;
+left: 10%;
+top: 480px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset6 {
+position: absolute;
+left: 10%;
+top: 530px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset7 {
+position: absolute;
+left: 10%;
+top: 580px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset8 {
+position: absolute;
+left: 10%;
+top: 630px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset9 {
+position: absolute;
+left: 10%;
+top: 680px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+
+#btnqset10 {
+position: absolute;
+left: 10%;
+top:730px;
+width: 120px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 12px;
+background-color : palegreen;
+}
+ 
+#questiontext{
+position : absolute;
+top : 280px;
+left : 25%;
+width : 300px;
+font-family : "verdana";
+font-size: 12px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border: thin black solid;
+resize: none;
+}
+ 
+#mytextarea1{
+position : absolute;
+top : 360px;
+left : 25%;
+width : 300px;
+font-family : "verdana";
+font-size: 12px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border: thin black solid;
+resize: none;
+}
+
+#mytextarea2{
+position : absolute;
+top : 420px;
+left : 25%;
+width : 300px;
+font-family : "verdana";
+font-size: 12px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border: thin black solid;
+resize: none;
+}
+
+#mytextarea3{
+position : absolute;
+top : 480px;
+left : 25%;
+width : 300px;
+font-family : "verdana";
+font-size: 12px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border: thin black solid;
+resize: none;
+}
+
+#mytextarea4{
+position : absolute;
+top : 540px;
+left : 25%;
+width : 300px;
+font-family : "verdana";
+font-size: 12px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border: thin black solid;
+resize: none;
+}
+
+#scoretitle{
+position : absolute;
+top : 180px;
+left : 60%;
+font-family : "verdana";
+font-size: 12px;;
+}
+
+#score {
+position: absolute;
+left: 65%;
+top: 180px;	
+font-family : "verdana"; 
+font-size: 11px;
+}
+
+#txtcongratsholder{
+position : absolute;
+top : 280px;
+left :  85%;
+font-size: 12px;;
+visibility : visible;
+}
+
+#scorepercent{
+position : absolute;
+top : 320px;
+left :  85%;
+font-size: 12px;;
+visibility : visible;
+}
+
+
+#qimagesid{
+position : absolute;
+top : 270px;
+left :  60%;
+}
+
+#imageanswerholder{
+position : absolute;
+top : 570px;
+left :  60%;
+}
+
+#imgcongratsholder{
+position : absolute;
+top : 720px;
+left :  60%;
+visibility : visible;
+}

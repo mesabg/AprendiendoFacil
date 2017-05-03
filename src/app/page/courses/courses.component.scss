@@ -9,20 +9,16 @@ $tablet-size: 992px;
 div.course span{
 	width: 100%;
 	@media screen and (min-width: $tablet-size){
-		font-size: 350px;
+		height: 200px;
 	}
 
 	//-- style phones
 	@media screen and (max-width: $phone-size){
-		font-size: 200px;
+		height: 150px;
 	}
-}
 
-div.course img{
-	width: inherit;
-	height: inherit;
-}
-
-div.course{
-	background-color: #eeeeee;
+	img{
+		width: inherit;
+		height: inherit;
+	}
 }

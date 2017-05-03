@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../app-routing.animation';
+import { TranslateService } from '../../translate/translate.service';
 
 @Component({
   selector: 'app-courses',
@@ -10,7 +11,7 @@ import { routerTransition } from '../../app-routing.animation';
 })
 export class CoursesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit() {
   }

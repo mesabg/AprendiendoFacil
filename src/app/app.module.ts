@@ -16,6 +16,12 @@ import { MenuHighlightDirective } from './component/header/directives/menu-highl
 import { CoursesComponent } from './page/courses/courses.component';
 import { LoginComponent } from './page/login/login.component';
 import { CourseDetailComponent } from './page/course-detail/course-detail.component';
+import { PageOverheadDirective } from './directives/page-overhead/page-overhead.directive';
+import { TranslateService } from './translate/translate.service';
+import { TRANSLATION_PROVIDERS } from './translate/translations';
+import { TranslatePipe } from './translate/translate.pipe';
+import { AuthGuardService } from './services/auth-guard.service';
+import { UserDataService } from './services/user-data.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,9 @@ import { CourseDetailComponent } from './page/course-detail/course-detail.compon
     MenuHighlightDirective,
     CoursesComponent,
     LoginComponent,
-    CourseDetailComponent
+    CourseDetailComponent,
+    PageOverheadDirective,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,7 @@ import { CourseDetailComponent } from './page/course-detail/course-detail.compon
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [TRANSLATION_PROVIDERS, TranslateService, AuthGuardService, UserDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
