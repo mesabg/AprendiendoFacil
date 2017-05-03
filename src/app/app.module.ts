@@ -22,6 +22,15 @@ import { TRANSLATION_PROVIDERS } from './translate/translations';
 import { TranslatePipe } from './translate/translate.pipe';
 import { AuthGuardService } from './services/auth-guard.service';
 import { UserDataService } from './services/user-data.service';
+import { AbcComponent } from './page/abc/abc.component';
+import { AlimentosComponent } from './page/alimentos/alimentos.component';
+import { AnimalesComponent } from './page/animales/animales.component';
+import { NumerosComponent } from './page/numeros/numeros.component';
+import { DetalleAlimentosComponent } from './page/detalle-alimentos/detalle-alimentos.component';
+import { DetalleAnimalesComponent } from './page/detalle-animales/detalle-animales.component';
+import { DetalleNumerosComponent } from './page/detalle-numeros/detalle-numeros.component';
+import { DetalleColoresComponent } from './page/detalle-colores/detalle-colores.component';
+import { ColoresComponent } from './page/colores/colores.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +46,16 @@ import { UserDataService } from './services/user-data.service';
     LoginComponent,
     CourseDetailComponent,
     PageOverheadDirective,
-    TranslatePipe
+    TranslatePipe,
+    AbcComponent,
+    AlimentosComponent,
+    AnimalesComponent,
+    NumerosComponent,
+    DetalleAlimentosComponent,
+    DetalleAnimalesComponent,
+    DetalleNumerosComponent,
+    DetalleColoresComponent,
+    ColoresComponent
   ],
   imports: [
     BrowserModule,
