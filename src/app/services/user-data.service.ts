@@ -5,9 +5,11 @@ import { AuthService } from './auth.service';
 export class UserDataService {
 	public name:string;
 	public lastName:string;
+	public username:string;
 	public email:string;
 	public tlfn:string;
 	public language:string;
+	public password:string;
 
 	constructor(private authService:AuthService) { 
 		if (this.authService.isLoggedIn){
@@ -16,6 +18,8 @@ export class UserDataService {
 			this.email = "moises.berenguer@gmail.com";
 			this.tlfn = "(+58)4164063859";
 			this.language = "es";
+			this.username = "moises.berenguer";
+			this.password = "123456789";
 		}
 	}
 
@@ -26,7 +30,9 @@ export class UserDataService {
 			lastName: this.lastName,
 			email: this.email,
 			tlfn: this.tlfn,
-			language: this.language
+			language: this.language,
+			username: this.username,
+			password: this.password
 		};
 	}
 }
