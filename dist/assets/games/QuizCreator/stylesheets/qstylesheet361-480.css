@@ -1,0 +1,259 @@
+#mediaq {
+background: -webkit-linear-gradient(left, rgba(255,255,50,0), rgba(255,255,50,1)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(right, rgba(255,255,50,0), rgba(255,255,50,1)); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(right, rgba(255,255,50,0), rgba(255,255,50,1)); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to right, rgba(255,255,50,0), rgba(255,255,50,1)); /* Standard syntax (must be last) */
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+#quizname {
+position: absolute;
+left: 30px;
+top: 240px;	
+font-family : "verdana"; 
+font-size: 14px;
+font-weight: bold;
+color : midnightblue;
+}
+
+#largebanner {position : absolute ; left : 10%; top : 20px; width: 85%; height : 140px; visibility : hidden;}
+#smallbanner {position : absolute ; left : 5%; top : 20px; width: 85%; height : 70px;  visibility : visible;}
+
+
+#btnqset1 {
+float : left;
+position: absolute;
+left: 30px;
+top: 280px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : yellow;
+}
+
+#btnqset2 {
+position: absolute;
+left: 30px;
+top: 330px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+
+#btnqset3 {
+position: absolute;
+left: 30px;
+top: 380px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+
+#btnqset4 {
+position: absolute;
+left: 30px;
+top: 430px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+
+#btnqset5 {
+position: absolute;
+left: 30px;
+top: 480px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+
+#btnqset6 {
+position: absolute;
+left: 30px;
+top: 530px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+
+#btnqset7 {
+position: absolute;
+left: 30px;
+top: 580px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+
+#btnqset8 {
+position: absolute;
+left: 30px;
+top: 630px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+
+#btnqset9 {
+position: absolute;
+left: 30px;
+top: 680px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+
+#btnqset10 {
+position: absolute;
+left: 30px;
+top: 730px;
+width: 100px;
+height: 25px;	
+font-family : "verdana"; 
+font-size: 11px;
+background-color : aliceblue;
+}
+ 
+#questiontext{
+position : absolute;
+top : 280px;
+left : 180px;
+width : 140px;
+height : 60px;
+font-family : "verdana";
+font-size: 11px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border : none;
+resize: none;
+}
+ 
+#mytextarea1{
+position : absolute;
+top : 380px;
+left : 180px;
+width : 140px;
+height : 60px;
+font-family : "verdana";
+font-size: 11px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border : none;
+resize: none;
+}
+
+#mytextarea2{
+position : absolute;
+top : 480px;
+left : 180px;
+width : 140px;
+height : 60px;
+font-family : "verdana";
+font-size: 11px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border : none;
+resize: none;
+}
+
+#mytextarea3{
+position : absolute;
+top : 580px;
+left : 180px;
+width : 140px;
+height : 60px;
+font-family : "verdana";
+font-size: 11px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border : none;
+resize: none;
+}
+
+#mytextarea4{
+position : absolute;
+top : 680px;
+left : 180px;
+width : 140px;
+height : 60px;
+font-family : "verdana";
+font-size: 11px;
+overflow: hidden;
+background-color: transparent;
+visibility : hidden;
+border : none;
+resize: none;
+}
+
+#scoretitle{
+position : absolute;
+top : 240px;
+left: 180px;
+font-family : "verdana";
+font-size: 11px;;
+}
+
+#score {
+position: absolute;
+left: 240px;
+top: 240px;	
+font-family : "verdana"; 
+font-size: 11px;
+}
+
+#qimagesid{
+position : absolute;
+top : 820px;
+left :  5%;
+}
+
+#txtcongratsholder{
+position : absolute;
+top : 1120px;
+left :  10%;
+font-size: 11px;
+visibility : visible;
+}
+
+#scorepercent{
+position : absolute;
+top : 1170px;
+left :  10%;
+font-size: 11px;
+visibility : visible;
+}
+
+#imageanswerholder{
+position : absolute;
+top : 1300px;
+left :  5%;
+}
+
+#imgcongratsholder{
+position : absolute;
+top : 1300px;
+left :  35%;
+visibility : visible;
+}

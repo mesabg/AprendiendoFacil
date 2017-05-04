@@ -1,8 +1,10 @@
 import { Directive, OnInit, ElementRef } from '@angular/core';
+
+//-- Using JQuery
 declare var $:any;
 
 @Directive({
-  selector: '[pageOverhead]'
+	selector: '[pageOverhead]'
 })
 export class PageOverheadDirective implements OnInit {
 	constructor(private element:ElementRef) { 

@@ -3,6 +3,9 @@ import { routerTransition } from '../../app-routing.animation';
 import { TranslateService } from '../../translate/translate.service';
 import { UserDataService } from '../../services/user-data.service';
 
+//-- Using JQuery
+declare var $:any;
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

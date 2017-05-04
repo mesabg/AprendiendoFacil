@@ -31,6 +31,9 @@ import { DetalleAnimalesComponent } from './page/detalle-animales/detalle-animal
 import { DetalleNumerosComponent } from './page/detalle-numeros/detalle-numeros.component';
 import { DetalleColoresComponent } from './page/detalle-colores/detalle-colores.component';
 import { ColoresComponent } from './page/colores/colores.component';
+import { ZoomDirective } from './directives/zoom/zoom.directive';
+import { ComentariosComponent } from './component/comentarios/comentarios.component';
+import { ResponseComponent } from './component/response/response.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,10 @@ import { ColoresComponent } from './page/colores/colores.component';
     DetalleAnimalesComponent,
     DetalleNumerosComponent,
     DetalleColoresComponent,
-    ColoresComponent
+    ColoresComponent,
+    ZoomDirective,
+    ComentariosComponent,
+    ResponseComponent
   ],
   imports: [
     BrowserModule,

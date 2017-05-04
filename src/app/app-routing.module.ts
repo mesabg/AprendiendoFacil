@@ -27,7 +27,7 @@ const routes: Routes = [
 	{path: '', children: [
 		{path: '', redirectTo: 'inicio', pathMatch: 'full'},
 		{path: 'inicio', component: HomeComponent},
-		{path: 'sobre-nosotros', component: AboutUsComponent, canActivate: [AuthGuardService]},
+		{path: 'sobre-nosotros', component: AboutUsComponent },
 		{path: 'perfil', component: ProfileComponent},
 		{path: 'registro', component: RegisterComponent},
 		{path: 'iniciar-sesion', component: LoginComponent},
